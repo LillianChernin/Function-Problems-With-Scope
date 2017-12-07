@@ -83,7 +83,29 @@
 //
 // console.log(generateFibonacciToNum(90));
 
-const generateEvenFibonacciToNum = (num) => {
+// const generateEvenFibonacciToNum = (num) => {
+//   let fibonacciSeq = [];
+//   let currentFibValue = 1;
+//   fibonacciSeq.push(currentFibValue);
+//   while (currentFibValue < num) {
+//     if (currentFibValue === 1) {
+//       currentFibValue = currentFibValue + fibonacciSeq[fibonacciSeq.length - 1];
+//     }
+//     fibonacciSeq.push(currentFibValue);
+//     currentFibValue = currentFibValue + fibonacciSeq[fibonacciSeq.length - 2];
+//   }
+//   let evenFibSeq = [];
+//   for (let i = 0; i < fibonacciSeq.length; i++) {
+//     if (fibonacciSeq[i] % 2 === 0) {
+//       evenFibSeq.push(fibonacciSeq[i]);
+//     }
+//   }
+//   return evenFibSeq;
+// }
+//
+// console.log(generateEvenFibonacciToNum(90));
+
+const generateEvenFibonacciToNumSum = (num) => {
   let fibonacciSeq = [];
   let currentFibValue = 1;
   fibonacciSeq.push(currentFibValue);
@@ -94,13 +116,13 @@ const generateEvenFibonacciToNum = (num) => {
     fibonacciSeq.push(currentFibValue);
     currentFibValue = currentFibValue + fibonacciSeq[fibonacciSeq.length - 2];
   }
-  let evenFibSeq = [];
+  let sumOfEvenFib = 0;
   for (let i = 0; i < fibonacciSeq.length; i++) {
     if (fibonacciSeq[i] % 2 === 0) {
-      evenFibSeq.push(fibonacciSeq[i]);
+      sumOfEvenFib = sumOfEvenFib + fibonacciSeq[i];
     }
   }
-  return evenFibSeq;
+  return sumOfEvenFib;
 }
 
-console.log(generateEvenFibonacciToNum(90));
+console.log(generateEvenFibonacciToNumSum(90));
