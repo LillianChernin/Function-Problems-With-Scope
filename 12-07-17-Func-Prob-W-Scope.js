@@ -17,3 +17,11 @@
 //
 // console.log(isAVowel("a"));
 // console.log(isAVowel("s"));
+
+const getTwoLengths = (str1, str2) => {
+  let arrOfStringLengths = [];
+  arrOfStringLengths.push(str1.length, str2.length);
+  return arrOfStringLengths;
+}
+
+console.log(getTwoLengths("Hank", "Hippopopalous"));
