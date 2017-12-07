@@ -48,15 +48,21 @@
 //
 // console.log(maxOfThree(6, 9, 1));
 //
+//
+// const printLongestWord = (strArray) => {
+//   let longestWord = strArray[0];
+//   for (let i = 0; i < strArray.length; i++) {
+//     if (strArray[i].length > longestWord.length) {
+//       longestWord = strArray[i];
+//     }
+//   }
+//   return longestWord;
+// }
+//
+// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 
-const printLongestWord = (strArray) => {
-  let longestWord = strArray[0];
-  for (let i = 0; i < strArray.length; i++) {
-    if (strArray[i].length > longestWord.length) {
-      longestWord = strArray[i];
-    }
-  }
-  return longestWord;
+const transmogrify = (num1, num2, num3) => {
+  return Math.pow((num1 * num2), num3);
 }
 
-console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+console.log(transmogrify(5, 3, 2));
