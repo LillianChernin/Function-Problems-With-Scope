@@ -67,7 +67,23 @@
 //
 // console.log(transmogrify(5, 3, 2));
 
-const generateFibonacciToNum = (num) => {
+// const generateFibonacciToNum = (num) => {
+//   let fibonacciSeq = [];
+//   let currentFibValue = 1;
+//   fibonacciSeq.push(currentFibValue);
+//   while (currentFibValue < num) {
+//     if (currentFibValue === 1) {
+//       currentFibValue = currentFibValue + fibonacciSeq[fibonacciSeq.length - 1];
+//     }
+//     fibonacciSeq.push(currentFibValue);
+//     currentFibValue = currentFibValue + fibonacciSeq[fibonacciSeq.length - 2];
+//   }
+//   return fibonacciSeq;
+// }
+//
+// console.log(generateFibonacciToNum(90));
+
+const generateEvenFibonacciToNum = (num) => {
   let fibonacciSeq = [];
   let currentFibValue = 1;
   fibonacciSeq.push(currentFibValue);
@@ -78,7 +94,13 @@ const generateFibonacciToNum = (num) => {
     fibonacciSeq.push(currentFibValue);
     currentFibValue = currentFibValue + fibonacciSeq[fibonacciSeq.length - 2];
   }
-  return fibonacciSeq;
+  let evenFibSeq = [];
+  for (let i = 0; i < fibonacciSeq.length; i++) {
+    if (fibonacciSeq[i] % 2 === 0) {
+      evenFibSeq.push(fibonacciSeq[i]);
+    }
+  }
+  return evenFibSeq;
 }
 
-console.log(generateFibonacciToNum(90));
+console.log(generateEvenFibonacciToNum(90));
