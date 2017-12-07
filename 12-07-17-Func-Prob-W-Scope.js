@@ -125,4 +125,4 @@ const generateEvenFibonacciToNumSum = (num) => {
   return sumOfEvenFib;
 }
 
-console.log(generateEvenFibonacciToNumSum(90));
+console.log(generateEvenFibonacciToNumSum(4000000));
