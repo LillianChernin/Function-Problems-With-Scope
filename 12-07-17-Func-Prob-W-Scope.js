@@ -36,14 +36,27 @@
 //
 // console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
-const maxOfThree = (num1, num2, num3) => {
-  if (num1 >= num2 && num1 >= num3) {
-    return num1;
-  } else if (num2 >= num1 && num2 >= num3) {
-    return num2;
-  } else {
-    return num3;
+// const maxOfThree = (num1, num2, num3) => {
+//   if (num1 >= num2 && num1 >= num3) {
+//     return num1;
+//   } else if (num2 >= num1 && num2 >= num3) {
+//     return num2;
+//   } else {
+//     return num3;
+//   }
+// }
+//
+// console.log(maxOfThree(6, 9, 1));
+//
+
+const printLongestWord = (strArray) => {
+  let longestWord = strArray[0];
+  for (let i = 0; i < strArray.length; i++) {
+    if (strArray[i].length > longestWord.length) {
+      longestWord = strArray[i];
+    }
   }
+  return longestWord;
 }
 
-console.log(maxOfThree(6, 9, 1));
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
